@@ -47,5 +47,5 @@ Tambien puede correrse el programa fuera del contenedor:
 
 ## Integrantes
 
-* Integrante 1.
+* Andrea Leon Cavallo
 * Integrante 2.
