@@ -30,7 +30,7 @@ Para que este cambio surja efecto, es necesario reiniciar la sesión.
 
 ### Ejecución
 
-Para poder utilizar el programa primero debe construir el contendor:
+Para poder utilizar el programa primero debe construir la imagen:
 ```bash
 docker buildx build -t entorno .
 ```
