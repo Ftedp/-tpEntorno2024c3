@@ -47,5 +47,5 @@ Tambien puede correrse el programa fuera del contenedor:
 
 ## Integrantes
 
-* Andrea Leon Cavallo
+* Julio Corradini.
 * Integrante 2.
