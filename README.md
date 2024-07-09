@@ -48,4 +48,4 @@ Tambien puede correrse el programa fuera del contenedor:
 ## Integrantes
 
 * Julio Corradini.
-* Integrante 2.
+* Facundo Torino.
