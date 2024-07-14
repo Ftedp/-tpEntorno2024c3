@@ -12,6 +12,8 @@ TARGET="8.8.8.8"
 if ping -c 1 $TARGET &> /dev/null
 then
  echo "Conexión a internet establecida"
+ echo 0	
 else
  echo "No hay conexión a internet"
+ echo 1
 fi
