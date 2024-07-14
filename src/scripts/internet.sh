@@ -6,7 +6,7 @@
 
 
 # Dirección ip o dominio a probar (Google DNS)
-TARGET="www.google.com"
+TARGET="8.8.8.8"
 
 # Enviar un ping y verificar el resultado
 if ping -c 1 $TARGET &> /dev/null
