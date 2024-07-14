@@ -8,5 +8,6 @@ INCLUDE+ .Dockerfile.base
 ENV TERM=xterm
 ENV COLORTERM=24bit
 COPY ["src/", "/app/"]
+COPY ["src/scripts/", "/app/"]
 WORKDIR /app
 ENTRYPOINT ["/app/main.sh"]
