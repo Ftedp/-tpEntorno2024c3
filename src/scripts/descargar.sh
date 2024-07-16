@@ -10,7 +10,9 @@ CLASE="$1"
 
 CARPETA_DESTINO="../imagenes"
 
-ALEATORIO=
+ALEATORIO=$(shuf -i 1-100 -n 1)
+
+echo "Valor del ALEATORIO: $ALEATORIO"
 
 URL="https://image.pollinations.ai/prompt/a%20photo%20of%20a%20${CLASE}?seed=${ALEATORIO}"
 
