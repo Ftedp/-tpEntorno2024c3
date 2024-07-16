@@ -2,7 +2,7 @@
 INCLUDE+ .Dockerfile.base
 
 # Instalar los programas necesarios
-
+RUN apt-get update && apt-get install -y wget iputils-ping coreutils
 
 # Configuracion de la aplicación
 ENV TERM=xterm

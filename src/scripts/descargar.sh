@@ -10,7 +10,9 @@ CLASE="$1"
 
 CARPETA_DESTINO="../imagenes"
 
-URL="https://image.pollinations.ai/prompt/a%20photo%20of%20a%20${CLASE}?seed=1"
+ALEATORIO=
+
+URL="https://image.pollinations.ai/prompt/a%20photo%20of%20a%20${CLASE}?seed=${ALEATORIO}"
 
 ARCHIVO_TEMPORAL="${CARPETA_DESTINO}/${CLASE}_imagen_descargada.jpg"
 
