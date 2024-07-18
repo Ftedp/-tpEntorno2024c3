@@ -9,6 +9,7 @@ ENV TERM=xterm
 ENV COLORTERM=24bit
 COPY ["src/", "/app/"]
 COPY ["src/scripts/", "/app/"]
-RUN chmod +x /app/scripts/descargar.sh
+RUN chmod +x /app/scripts/descargar.sh 
+RUN chmod +x /app/scripts/etiquetar.sh 
 WORKDIR /app
 ENTRYPOINT ["/app/main.sh"]
