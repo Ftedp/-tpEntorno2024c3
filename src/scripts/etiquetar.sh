@@ -9,9 +9,8 @@
 #
 # Asegúrese de devolver un valor de salida acorde a la situación.
 
-<<<<<<< HEAD
 yolo predict source=/imagen.jpg
-=======
+
 #Itero todas las fotos en la carpeta.
 for foto in *.jpg; do
 
@@ -32,5 +31,4 @@ done
 rm archivo
 
 echo "Los archivos .tag se crearon correctamente." && exit 0
->>>>>>> origin/TrabajoFacu
 
