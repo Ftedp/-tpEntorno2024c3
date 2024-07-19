@@ -9,4 +9,5 @@
 #
 # Asegúrese de devolver un valor de salida acorde a la situación.
 
-echo Módulo de etiquetado no implementado. && exit 1
+yolo predict source=/imagen.jpg
+
