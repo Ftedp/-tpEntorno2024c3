@@ -12,5 +12,6 @@ COPY ["src/scripts/", "/app/"]
 RUN chmod +x /app/scripts/descargar.sh 
 RUN chmod +x /app/scripts/etiquetar.sh 
 RUN chmod +x /app/scripts/mostrar.sh
+RUN chmod +x /app/scripts/comprimir.sh
 WORKDIR /app
 ENTRYPOINT ["/app/main.sh"]
