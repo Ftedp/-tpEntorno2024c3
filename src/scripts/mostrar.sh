@@ -24,6 +24,7 @@ echo "Imagenes encontradas."
 
 for imagen in "${imagenes[@]}"; do
     echo "$imagen.jpg" 
+    jp2a -z "$imagen.jpg"
 done
 
 exit 0
