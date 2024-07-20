@@ -9,4 +9,19 @@
 #
 # Asegúrese de devolver un valor de salida acorde a la situación.
 
-echo Módulo de etiquetado no implementado. && exit 1
+for foto in *.jpg; do
+
+    nombre="${foto%.*}"
+
+    yolo predict source=$foto > archivo 2>/dev/null
+    grep .jpg archivo | cut -d " " -f5- | rev | cut -d " " -f2- | rev > $nombre.tag
+
+    If [ $? -ne 0 ]; then
+	echo "Error al crear el archivo .tag"
+	exit 1
+    fi
+
+done
+rm archivo
+
+echo "Los archivos .tag se crearon correctamente." && exit 0
