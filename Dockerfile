@@ -2,7 +2,7 @@
 INCLUDE+ .Dockerfile.base
 
 # Instalar los programas necesarios
-RUN apt-get update && apt-get install -y wget iputils-ping coreutils jp2a
+RUN apt-get update && apt-get install -y wget iputils-ping coreutils jp2a gawk
 
 # Configuracion de la aplicación
 ENV TERM=xterm
@@ -15,5 +15,6 @@ RUN chmod +x /app/scripts/etiquetar.sh
 RUN chmod +x /app/scripts/comprimir.sh 
 RUN chmod +x /app/scripts/mostrar.sh
 RUN chmod +x /app/scripts/comprimir.sh
+RUN chmod +x /app/scripts/informe_estadistico.sh
 WORKDIR /app
 ENTRYPOINT ["/app/main.sh"]
