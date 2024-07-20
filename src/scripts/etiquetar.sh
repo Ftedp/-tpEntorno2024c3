@@ -9,6 +9,8 @@
 #
 # Asegúrese de devolver un valor de salida acorde a la situación.
 
+#yolo predict source=/imagen.jpg
+
 #Itero todas las fotos en la carpeta.
 for foto in *.jpg; do
 
