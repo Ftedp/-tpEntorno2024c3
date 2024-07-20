@@ -13,6 +13,7 @@ select OPCION in "Descargar imágenes."      \
                  "Comprimir imágenes."      \
                  "Listar imágenes."         \
                  "Informacion del sistema." \
+		 "Informe estadisticas." \
                  "Salir."
 do
     case $REPLY in
@@ -22,7 +23,8 @@ do
         4) (cd $IMAGESDIR && $SOURCEDIR/scripts/comprimir.sh) ;;
         5) (cd $IMAGESDIR && $SOURCEDIR/menu/listar.sh) ;;
         6) $SOURCEDIR/menu/info.sh ;;
-        7) exit 0 ;;
+	7) (cd $IMAGEDIR && $SOURCEDIR/scripts/informe_estadistico.sh) ;;
+        8) exit 0 ;;
         *) echo Opción incorrecta.
     esac
 
