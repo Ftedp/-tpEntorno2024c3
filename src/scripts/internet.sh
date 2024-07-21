@@ -8,7 +8,7 @@
 # Dirección ip o dominio a probar (Google DNS)
 TARGET="8.8.8.8"
 
-# Enviar un ping y verificar el resultado
+# Enviar un ping y verificar el resultado, redirigiendo la salida y los errores a /dev/null
 if ping -c 1 $TARGET &> /dev/null
 then
  echo "Conexión a internet establecida"

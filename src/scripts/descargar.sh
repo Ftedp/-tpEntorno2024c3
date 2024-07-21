@@ -10,17 +10,18 @@ CLASE="$1"
 
 CARPETA_DESTINO="../imagenes"
 
+#creamos valor aleatorio
 ALEATORIO=$(shuf -i 1-100 -n 1)
 
-echo "Valor del ALEATORIO: $ALEATORIO"
-
+#buscamos imagen
 URL="https://image.pollinations.ai/prompt/a%20photo%20of%20a%20${CLASE}?seed=${ALEATORIO}"
 
 ARCHIVO_TEMPORAL="${CARPETA_DESTINO}/${CLASE}_imagen_descargada.jpg"
 
+#descargamos imagen desde url y guardamos en el archivo temporal
 wget -O "$ARCHIVO_TEMPORAL" "$URL"
 
-
+#Si la ejecucion es correcta, generamos y seleccionamos hash, para luego renombrar el archivo.
 if [ $? -eq 0 ]; then
  CHECKSUM=$(sha256sum "$ARCHIVO_TEMPORAL" | awk '{ print $1 }')
 

@@ -10,7 +10,10 @@ cd ../imagenes
 
 for imagen in *.jpg; do
 
+    #elimino el .jpg del nombre
     nombre="${imagen%.*}" 
+
+    #inicializo contador de imagenes
     contador_imagenes=$(( contador_imagenes + 1 ))    
 
     echo "Nombre del archivo: ${nombre}.jpg"
@@ -25,6 +28,7 @@ for imagen in *.jpg; do
 
     etiquetas=$(cat "${nombre}.tag" 2>/dev/null)
     
+    #imprimo por pantalla las etiquetas encontradas dentro de la imagen
     if [ $? -eq 0 ]; then
 	echo "Los objetos encontrados en esta imagen son: ${etiquetas}"
 	contador_archivos_tag=$(( contador_archivos_tag + 1 ))
