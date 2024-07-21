@@ -37,13 +37,21 @@ docker buildx build -t entorno .
 
 Luego puede ejecutarse el contenedor con el siguiente comando:
 ```bash
-docker run -it entorno
+docker run -it -v ruta/de/la/imagen/en/el/host:/imagenes entorno 
 ```
 
 Tambien puede correrse el programa fuera del contenedor:
 ```bash
 ./src/main.sh
 ```
+
+Dentro del contenedor se despliega un menu que cuenta con varios scripts:
+* Comprimir:Comprime todo los archivos de la carpeta /imagenes y genera un numero hash.
+* Descargar: Descarga imagenes de un sitio web.
+* Etiquetar: Identifica los objetos de cada imagen con Yolo y genera un archivo tag, con las objetos.
+* Internet: Chequea si hay internet.
+* Mostrar: Muestra las imagenes (que cuenten con la etiqueta ingresada por el usuario) por pantalla utilizando jp2a.
+* Informe Estadistico: Genera un informe actual sobre las cantidad de imagenes, espacio ocupado, objetos y mas.
 
 ## Integrantes
 
