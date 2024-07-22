@@ -27,7 +27,7 @@ for imagen in "${imagenes[@]}"; do
     echo "                                                                                    "
     echo "Nombre del archivo: $imagen.jpg" 
     echo "                                                                                    "
-    jp2a --chars=" .:-=+*#%@" --term-fit "$imagen.jpg"
+    jp2a --fill --color "$imagen.jpg"
     echo "------------------------------------------------------------------------------------"
 done
 

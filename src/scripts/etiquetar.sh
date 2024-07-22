@@ -16,7 +16,8 @@ for foto in *.jpg; do
 
     #Saco el .jpg del nombre de la foto.
     nombre="${foto%.*}"
-
+    
+    echo "Aguarde un momento..."
     #llamo a Yolo, filtro las etiquetas identificadas por yolo y genero un nuevo archivo con ellas.
     yolo predict source=$foto > archivo 2>/dev/null
     grep .jpg archivo | cut -d " " -f5- | rev | cut -d " " -f2- | rev > $nombre.tag 
@@ -27,7 +28,6 @@ for foto in *.jpg; do
 	exit 1
     fi
 
-    echo "Aguarde un momento..."
     echo "                                                                              "
     echo "Archivo tag generado correctamente"
     echo "------------------------------------------------------------------------------"
